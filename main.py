@@ -1,16 +1,10 @@
 """ Simple debut Main """
-from PyQt5.QtWidgets import QApplication, QWidget
-import sys
+from db.connector_db import DbConnector
 
 def main():
-    app = QApplication(sys.argv)
-    widget = QWidget()
-
-    widget.show()
-
-    app.exec_()
     greet = "Hello Python!"
     print(greet)
 
 if __name__ == "__main__":
+    db = DbConnector()
     main()

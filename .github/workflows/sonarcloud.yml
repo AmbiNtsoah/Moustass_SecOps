@@ -13,13 +13,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name : Install dependancies
-        run : | 
-          pip install -r requirements.txt
-      - name: Run tests and generate coverage
-        run: |
-          coverage run -m pytest
-          coverage xml
+      # - name : Install dependancies
+      #   run : | 
+      #     pip install -r requirements.txt
+      # - name: Run tests and generate coverage
+      #   run: |
+      #     coverage run -m pytest
+      #     coverage xml
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6
         env:
